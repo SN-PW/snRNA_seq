@@ -2,9 +2,9 @@ library(Seurat)
 library(ggplot2)
 library(dplyr)
 
-PTS1_ctrl <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS1/SpeedTest_ctrl_PTS1のコピー.txt")
-PTS1_4h <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS1/SpeedTest_4hours_PTS1のコピー.txt")
-PTS1_12h <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS1/SpeedTest_12hours_PTS1のコピー.txt")
+PTS1_ctrl <- read.table("/path/to/SpeedTest_ctrl_PTS1.txt")
+PTS1_4h <- read.table("/path/to/SpeedTest_4hours_PTS1.txt")
+PTS1_12h <- read.table("/path/to/SpeedTest_12hours_PTS1.txt")
 
 I1_ctrl <- CreateSeuratObject(PTS1_ctrl)
 I1_4h <- CreateSeuratObject(PTS1_4h)
@@ -16,9 +16,9 @@ IRI <- ScaleData(IRI,features = c("Slc1a5","Slc5a8","Slc5a12"))
 IRI <- RenameIdents(object = IRI, 'X4hours' = "4hours",  'X12hours' = "12hours")
 levels(x = IRI) <- c("ctrl","4hours","12hours")
 
-PTS2_ctrl <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS2/SpeedTest_ctrl_PTS2のコピー.txt")
-PTS2_4h <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS2/SpeedTest_4hours_PTS2のコピー.txt")
-PTS2_12h <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS2/SpeedTest_12hours_PTS2のコピー.txt")
+PTS2_ctrl <- read.table("/path/to/SpeedTest_ctrl_PTS2.txt")
+PTS2_4h <- read.table("/path/to/SpeedTest_4hours_PTS2.txt")
+PTS2_12h <- read.table("/path/to/SpeedTest_12hours_PTS2.txt")
 
 I2_ctrl <- CreateSeuratObject(PTS2_ctrl)
 I2_4h <- CreateSeuratObject(PTS2_4h)
@@ -32,9 +32,9 @@ IRI2 <- RenameIdents(object = IRI2, 'X4hours' = "4hours",  'X12hours' = "12hours
 levels(x = IRI2) <- c("ctrl","4hours","12hours")
 
 
-PTS3_ctrl <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS3/SpeedTest_ctrl_PTS3のコピー.txt")
-PTS3_4h <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS3/SpeedTest_4hours_PTS3のコピー.txt")
-PTS3_12h <- read.table("/Users/sakitakeshita/snRNA-seq/1. Work on files/PTS3/SpeedTest_12hours_PTS3のコピー.txt")
+PTS3_ctrl <- read.table("/path/to/SpeedTest_ctrl_PTS3.txt")
+PTS3_4h <- read.table("/path/to/SpeedTest_4hours_PTS3.txt")
+PTS3_12h <- read.table("/path/to/SpeedTest_12hours_PTS3.txt")
 
 I3_ctrl <- CreateSeuratObject(PTS3_ctrl)
 I3_4h <- CreateSeuratObject(PTS3_4h)
@@ -49,7 +49,6 @@ levels(x = IRI3) <- c("ctrl","4hours","12hours")
 
 marker = c("Slc1a5","Slc5a8","Slc5a12")
 
-p <- DotPlot(IRI, features = rev(marker),cols = c("blue", "red"), dot.scale = 15) +ggtitle("PTS1")
-q <- DotPlot(IRI2, features = rev(marker), cols = c("blue", "red"), dot.scale = 15) + ggtitle("PTS2")
-r <- DotPlot(IRI3, features = rev(marker), cols = c("blue", "red"), dot.scale = 15) + ggtitle("PTS3")
-
+DotPlot(IRI, features = rev(marker),cols = c("blue", "red"), dot.scale = 15) +ggtitle("PTS1")
+DotPlot(IRI2, features = rev(marker), cols = c("blue", "red"), dot.scale = 15) + ggtitle("PTS2")
+DotPlot(IRI3, features = rev(marker), cols = c("blue", "red"), dot.scale = 15) + ggtitle("PTS3")
