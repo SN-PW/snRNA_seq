@@ -2,9 +2,9 @@ library(Seurat)
 library(ggplot2)
 library(dplyr)
 
-PTS1_ctrl <- read.table("/Users/sakitakeshita/Downloads/ctrl/def_SpeedTest_ctrl_PTS1.txt")
-PTS1_4h <- read.table("/Users/sakitakeshita/Downloads/4hours/def_SpeedTest_4hours_PTS1.txt")
-PTS1_12h <- read.table("/Users/sakitakeshita/Downloads/12hours/def_SpeedTest_12hours_PTS1.txt")
+PTS1_ctrl <- read.table("/path/to/SpeedTest_ctrl_PTS1.txt")
+PTS1_4h <- read.table("/path/to/SpeedTest_4hours_PTS1.txt")
+PTS1_12h <- read.table("/path/to/SpeedTest_12hours_PTS1.txt")
 
 I1_ctrl <- CreateSeuratObject(PTS1_ctrl)
 I1_4h <- CreateSeuratObject(PTS1_4h)
@@ -27,9 +27,9 @@ IRI <- RenameIdents(object = IRI,
                      "IRI4h3" = "4hours")
 levels(x = IRI) <- c("ctrl","4hours","12hours")
 
-PTS2_ctrl <- read.table("/Users/sakitakeshita/Downloads/ctrl/def_SpeedTest_ctrl_PTS2.txt")
-PTS2_4h <- read.table("/Users/sakitakeshita/Downloads/4hours/def_SpeedTest_4hours_PTS2.txt")
-PTS2_12h <- read.table("/Users/sakitakeshita/Downloads/12hours/def_SpeedTest_12hours_PTS2.txt")
+PTS2_ctrl <- read.table("/path/to/SpeedTest_ctrl_PTS2.txt")
+PTS2_4h <- read.table("/path/to/SpeedTest_4hours_PTS2.txt")
+PTS2_12h <- read.table("/path/to/SpeedTest_12hours_PTS2.txt")
 
 I2_ctrl <- CreateSeuratObject(PTS2_ctrl)
 I2_4h <- CreateSeuratObject(PTS2_4h)
@@ -53,9 +53,9 @@ IRI2 <- RenameIdents(object = IRI2,
 levels(x = IRI2) <- c("ctrl","4hours","12hours")
 
 
-PTS3_ctrl <- read.table("/Users/sakitakeshita/Downloads/ctrl/def_SpeedTest_ctrl_PTS3.txt")
-PTS3_4h <- read.table("/Users/sakitakeshita/Downloads/4hours/def_SpeedTest_4hours_PTS3.txt")
-PTS3_12h <- read.table("/Users/sakitakeshita/Downloads/12hours/def_SpeedTest_12hours_PTS3.txt")
+PTS3_ctrl <- read.table("/path/to/SpeedTest_ctrl_PTS3.txt")
+PTS3_4h <- read.table("/path/to/SpeedTest_4hours_PTS3.txt")
+PTS3_12h <- read.table("/path/to/SpeedTest_12hours_PTS3.txt")
 
 I3_ctrl <- CreateSeuratObject(PTS3_ctrl)
 I3_4h <- CreateSeuratObject(PTS3_4h)
