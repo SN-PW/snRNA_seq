@@ -1,3 +1,4 @@
+
 library(Seurat)
 library(ggplot2)
 library(dplyr)
@@ -84,4 +85,3 @@ marker = c("Slc5a8","Slc5a12","Slc1a5")
 p <- DotPlot(IRI, features = marker,cols = c("blue", "red")) + scale_radius(range=c(1,15),breaks=c(25,50,75)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS1")
 q <- DotPlot(IRI2, features = marker, cols = c("blue", "red"))+ scale_radius(range=c(1,15),breaks=c(5,15,25)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS2")
 r <- DotPlot(IRI3, features = marker, cols = c("blue", "red"))+ scale_radius(range=c(1,15),breaks=c(10,30,50)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS3")
-
