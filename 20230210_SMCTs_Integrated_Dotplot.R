@@ -85,3 +85,9 @@ marker = c("Slc5a8","Slc5a12","Slc1a5")
 p <- DotPlot(IRI, features = marker,cols = c("blue", "red")) + scale_radius(range=c(1,15),breaks=c(25,50,75)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS1")
 q <- DotPlot(IRI2, features = marker, cols = c("blue", "red"))+ scale_radius(range=c(1,15),breaks=c(5,15,25)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS2")
 r <- DotPlot(IRI3, features = marker, cols = c("blue", "red"))+ scale_radius(range=c(1,15),breaks=c(10,30,50)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS3")
+
+marker = c("Slc1a5")
+
+p <- DotPlot(IRI, features = rev(marker),cols = c("blue", "red")) + scale_radius(limits = c(0, 0.9),range=c(1,15),breaks=c(0.2,0.4,0.6,0.8)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) +ggtitle("PTS1")
+q <- DotPlot(IRI2, features = rev(marker), cols = c("blue", "red"))+ scale_radius(limits = c(0, 0.9),range=c(1,15),breaks=c(0.2,0.4,0.6,0.8)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS2")
+r <- DotPlot(IRI3, features = rev(marker), cols = c("blue", "red"))+ scale_radius(limits = c(0, 0.9),range=c(1,15),breaks=c(0.2,0.4,0.6,0.8)) +scale_color_gradient(low="blue", high="red",limits = c(-1.25, 1.25)) + ggtitle("PTS3")
