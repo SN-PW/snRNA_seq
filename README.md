@@ -10,7 +10,7 @@ The corresponding data available at https://www.ncbi.nlm.nih.gov/geo/query/acc.c
 - “GSE139107_MouseIRI.metadata.txt”
 
 To create Fig. S7, “20230209_PTS_separation.ipynb” is executed using the following files to make “SpeedTest” files.   
--Extract_control_GSE139107_MouseIRI.metadata.txt   
--Extract_4hours_GSE139107_MouseIRI.metadata.txt   
--Extract_12hours_GSE139107_MouseIRI.metadata.txt   
+- Extract_control_GSE139107_MouseIRI.metadata.txt   
+- Extract_4hours_GSE139107_MouseIRI.metadata.txt   
+- Extract_12hours_GSE139107_MouseIRI.metadata.txt   
 Subsequently, exported “SpeedTest” files should be used in the R script file named “20230210_SMCTs_Integrated_Dotplot.R”.
