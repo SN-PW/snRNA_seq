@@ -3,12 +3,8 @@ Expressions of Asct2, Smct1, and Smct2 in early Ischemia Reperfusion Injury (4 h
 
 The dataset of single nucleus RNA sequencing (snRNA-seq) was originally published by Kirita et al. PNAS 117(27)15874 – 15883 (https://doi.org/10.1073/pnas.2005477117). 
 
-" The corresponding data including:
-" -“GSE139107_MouseIRI_4hours.dge.txt”
-" -“GSE139107_MouseIRI_12hours.dge.txt”
-" -“GSE139107_MouseIRI_control.dge.txt”
-" -“GSE139107_MouseIRI.metadata.txt”
-" are available at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139107.
+The corresponding data available at https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE139107 include “GSE139107_MouseIRI_4hours.dge.txt”, “GSE139107_MouseIRI_12hours.dge.txt”, “GSE139107_MouseIRI_control.dge.txt”, and “GSE139107_MouseIRI.metadata.txt”
+".
 
 To create Fig. S7, “20230209_PTS_separation.ipynb” is executed using the following files to make “SpeedTest” files.
 -Extract_control_GSE139107_MouseIRI.metadata.txt
