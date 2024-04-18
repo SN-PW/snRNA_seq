@@ -1,3 +1,6 @@
+This is a repository files for Supplement Figures in the publication entitle "A multi-hierarchical approach reveals D-serine as a hidden substrate of sodium-coupled monocarboxylate transporters" by Wiriyasermkul, et al. 
+DOI: https://doi.org/10.7554/eLife.92615.3
+
 Reanalysis of expressions of Asct2 (Slc1a5), Smct1 (Slc5a8) and Smct2 (Slc5a12) in renal proximal tubules at the single cell level. 
 Expressions of Asct2, Smct1, and Smct2 in early Ischemia Reperfusion Injury (4 h and 12 h IRI) were compared to the controls.
 
